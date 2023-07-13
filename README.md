@@ -1,7 +1,16 @@
 # Simple-streaming
-### A very simple YouTube streaming web app designed for kids.
+A very simple YouTube streaming web app designed for kids.
 
+## Contents
+1. Overview
+2. File Descriptions
+3. Set up guide
+
+
+### Overview 
 This web app presents a specified number of user-selected YouTube videos in predefined categories that a child is able to access.
+
+<img src="https://cdn.discordapp.com/attachments/1095200505153724470/1129025758657007617/Screen_Shot_2023-07-13_at_10.10.39_pm.png">
 
 The significant amount of available options on YouTube and the ease at which one can switch between videos may create a degree of decision fatigue and may also negatively impact one's attention span.
 The aim of this app is to reduce the amount of choices that one is exposed to when streaming videos on YouTube.
@@ -18,7 +27,6 @@ The app presents a webpage that displays six video categories:
 - Music
 
 Each category displays 3 randomly selected videos from a set of user-made YouTube playlists.
-
 
 The app is set up using the standard Django architecture (https://docs.djangoproject.com/en/4.2/) 
 with the following app-specific files:
