@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube-like Page</title>
+    <style>
+        /* CSS styles for layout and appearance */
+
+        /* Heading bar */
+        .heading-bar {
+            height: 20px;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+
+        /* Thin column on the left */
+        .sidebar {
+            width: 10%;
+            float: left;
+        }
+
+        .sidebar-icon {
+            flex-basis: 50px; /* Adjust the width as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            margin-right: 55px;
+            margin-left: 0px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .sidebar-icon img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Grid of video thumbnails on the right */
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 90%;
+            float: left;
+        }
+
+        .sidebar-icon img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .video-thumbnail {
+            flex-basis: calc(33.33% - 20px); /* Adjust to the desired number of columns */
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .video-title {
+            /* CSS styles for video titles */
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Embedded video player */
+        .video-player-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background: rgba(0, 0, 0, 1);
+            width: 70%;
+            height: 70%;
+            display: none;
+        }
+
+        .video-player {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading-bar">
+        <!-- Heading content -->
+        <h1></h1>
+    </div>
+
+    <div class="sidebar">
+        <!-- Icons for loading different video lists -->
+        <div class="sidebar-icon"><a href="/tv-videos/"><img src="https://icons.iconarchive.com/icons/flat-icons.com/flat/256/Flat-TV-icon.png" alt="TV"></a></div>
+        <div class="sidebar-icon"><a href="/education-videos/"><img src="https://static-00.iconduck.com/assets.00/open-book-icon-2048x2048-wuklhx59.png" alt="Education"></a></div>
+        <div class="sidebar-icon"><a href="/doco-videos/"><img src="https://cdn-icons-png.flaticon.com/512/616/616616.png" alt="Docos"></a></div>
+        <div class="sidebar-icon"><a href="/game-videos/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFMSO-QRm4WDqR9-wqXyW16aOkbvYh5zJN2w&usqp=CAU" alt="Games"></a></div>
+        <div class="sidebar-icon"><a href="/sport-videos/"><img src="https://cdn-icons-png.flaticon.com/512/1099/1099672.png" alt="Sport"></a></div>
+        <div class="sidebar-icon"><a href="/music-videos/"><img src="https://cdn-icons-png.flaticon.com/512/1820/1820740.png" alt="Music"></a></div>
+    </div>
+
+
+    <div class="video-grid">
+        <div class="video-thumbnail" onclick="openVideo('pI-3yeb5NaA')">
+            <img src="https://i.ytimg.com/vi/pI-3yeb5NaA/maxresdefault.jpg" alt="Video Thumbnail">
+            <div class="video-info">
+                <p class="video-title">A Picture for the Closed Stable 2 Legend of Zelda Tears of the Kingdom</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player-container">
+        <div class="video-player">
+            <!-- Embedded video player -->
+            <!-- Add the embedded video player element and styling -->
+            <iframe id="player" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+            <span class="close-icon" onclick="closeVideo()">&#x2716;</span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions for video interactions
+        function openVideo(videoId) {
+          var player = document.getElementById('player');
+          player.src = "https://www.youtube.com/embed/" + videoId;
+          document.querySelector('.video-player-container').style.display = 'block';
+        }
+
+        function closeVideo() {
+          var player = document.getElementById('player');
+          player.src = "";
+          document.querySelector('.video-player-container').style.display = 'none';
+        }
+
+    </script>
+
+</body>
+</html>

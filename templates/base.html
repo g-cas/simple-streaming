@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube-like Page</title>
+    <style>
+        /* CSS styles for layout and appearance */
+
+        /* Heading bar */
+        .heading-bar {
+            height: 20px;
+            background-color: #ffffff;
+            padding: 10px;
+        }
+
+        /* Thin column on the left */
+        .sidebar {
+            width: 10%;
+            float: left;
+        }
+
+        .sidebar-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            margin-right: 55px;
+            margin-left: 0px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .sidebar-icon img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .sidebar-icon img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+
+            .image-container {
+                height: 550px;
+                width: 1000px;
+                overflow: hidden;
+            }
+
+            .cropped-image {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+        /* Body message */
+        .body {
+            margin-top: -80px;
+            margin-left: -100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="heading-bar"></div>
+
+    <div class="sidebar">
+        <!-- Icons for loading different video lists -->
+        <div class="sidebar-icon"><a href="/tv-videos/"><img src="https://icons.iconarchive.com/icons/flat-icons.com/flat/256/Flat-TV-icon.png" alt="TV"></a></div>
+        <div class="sidebar-icon"><a href="/education-videos/"><img src="https://static-00.iconduck.com/assets.00/open-book-icon-2048x2048-wuklhx59.png" alt="Education"></a></div>
+        <div class="sidebar-icon"><a href="/doco-videos/"><img src="https://cdn-icons-png.flaticon.com/512/616/616616.png" alt="Docos"></a></div>
+        <div class="sidebar-icon"><a href="/game-videos/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFMSO-QRm4WDqR9-wqXyW16aOkbvYh5zJN2w&usqp=CAU" alt="Games"></a></div>
+        <div class="sidebar-icon"><a href="/sport-videos/"><img src="https://cdn-icons-png.flaticon.com/512/1099/1099672.png" alt="Sport"></a></div>
+        <div class="sidebar-icon"><a href="/music-videos/"><img src="https://cdn-icons-png.flaticon.com/512/1820/1820740.png" alt="Music"></a></div>
+    </div>
+
+    <div class="body">
+        <i class="fa-solid fa-user"></i>
+        <div class="image-container">
+    <img class="cropped-image" src="https://cdn.dribbble.com/users/5004212/screenshots/15837061/media/db25ad43c2dfd845077437988e44cd18.jpg" alt="Cropped Image">
+        </div>
+    </div>
+
+</body>
+</html>
