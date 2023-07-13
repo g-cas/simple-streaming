@@ -1,9 +1,9 @@
 # simple-streaming
 A very simple YouTube streaming web app designed for kids.
 
-This is a web app that presents a predefined and categorised amount of YouTube videos a child is able to access.
-The significant amount of available options on YouTube and the ease at which one can switch between videos may create a degree of decision fatigue and may also negatively impact one's attention span.
+This is a web app that presents a specified number of user-selected YouTube videos in predefined categories that a child is able to access.
 
+The significant amount of available options on YouTube and the ease at which one can switch between videos may create a degree of decision fatigue and may also negatively impact one's attention span.
 The aim of this app is to reduce the amount of choices that one is exposed to when streaming videos on YouTube.
 With the hope that the viewer will be better able to focus on each video and will also maintain a decent level of focus.
 
